@@ -1,0 +1,25 @@
+<h3 class="text-center">Person List</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td> Id </td>
+      <td> Name </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons" routerLink="/person/{{person.id}}">
+      <td>
+        {{person.id}}
+      </td>
+      <td>
+        {{person.firstname}} {{person.lastname}}
+      </td>
+      <td>
+        <a routerLink="person/{{person.id}}">detail</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
