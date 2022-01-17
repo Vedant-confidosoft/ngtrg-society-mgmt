@@ -21,34 +21,34 @@
           <input name="firstname" [(ngModel)]="person.firstname" type="text" class="form-control" placeholder="First name" aria-label="First name">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Middle name" aria-label="Middle name">
+            <input name="middlename" [(ngModel)]="person.middlename" type="text" class="form-control" placeholder="Middle name" aria-label="Middle name">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          <input name="lastname" [(ngModel)]="person.lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
         </div>
     </div>
 
     <div class="col-md-6">
         <label for="inputGender" class="form-label">Gender:</label>
-        <input type="text" class="form-control" id="inputGender" placeholder="">
+        <input type="text" name="gender" [(ngModel)]="person.gender" class="form-control" id="inputGender" placeholder="">
     </div>
 
     <div class="col-md-6">
         <label for="inputDOB" class="form-label">Date of Birth</label>
         <div>
-            <input type="date" id="inputDOB" class="form-control">
+            <input name="dob" [(ngModel)]="person.dob" type="date" id="inputDOB" class="form-control">
         </div>
 
     </div>
 
     <div class="col-md-6">
-        <label for="inputMobileNo" class="form-label">Moblie No:</label>
-        <input type="tel" name="" id="inputMobileNo" class="form-control">
+        <label for="mobile" class="form-label">Moblie No:</label>
+        <input type="tel" name="mobile" [(ngModel)]="person.mobile" id="inputMobileNo" class="form-control">
     </div>
 
     <div class="col-md-6">
-        <label for="inputWhatsappNo" class="form-label ">Whatsapp No:</label>
-        <input type="tel" name="" id="inputWhatsappNo" class="form-control">
+        <label for="whatsapp" class="form-label ">Whatsapp No:</label>
+        <input type="tel" name="whatsapp" [(ngModel)]="person.whatsapp" id="inputWhatsappNo" class="form-control">
     </div>
 
     <div class="col-md-6">
@@ -57,52 +57,52 @@
     </div>
 
     <div class="col-md-6">
-        <label for="inputOccupation" class="form-label">Occupation:</label>
-        <input type="text" name="" id="inputOccupation" class="form-control">
+        <label for="occpuation" class="form-label">Occupation:</label>
+        <input name="occupation" [(ngModel)]="person.occupation" type="text" id="inputOccupation" class="form-control">
     </div>
 
     <div class="col-md-12">
-      <label for="inputEmail" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="abc@gmail.com">
+      <label for="email" class="form-label">Email</label>
+      <input name="email" [(ngModel)]="person.email" type="email" class="form-control" id="inputEmail" placeholder="abc@gmail.com">
     </div>
 
 
     <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <label for="address" class="form-label">Address</label>
+      <input name="address" [(ngModel)]="person.address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
     </div>
 
     <div class="col-md-3">
-      <label for="inputCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="city" class="form-label">City</label>
+      <input name="city" [(ngModel)]="person.city" type="text" class="form-control" id="inputCity">
     </div>
 
     <div class="col-md-3">
-        <label for="inputArea" class="form-label">Area</label>
-        <input type="text" class="form-control" id="inputArea">
+        <label for="area" class="form-label">Area</label>
+        <input name="area" [(ngModel)]="person.area" type="text" class="form-control" id="inputArea">
       </div>
 
     <div class="col-md-3">
-      <label for="inputState" class="form-label">State</label>
-      <input type="text" class="form-control" id="inputState">
+      <label for="state" class="form-label">State</label>
+      <input name="state" [(ngModel)]="person.state" type="text" class="form-control" id="inputState">
     </div>
 
     <div class="col-md-3">
-      <label for="inputZip" class="form-label">Pincode</label>
-      <input type="text" class="form-control" id="inputZip">
+      <label for="pincode" class="form-label">Pincode</label>
+      <input name="pincode" [(ngModel)]="person.pincode" type="text" class="form-control" id="inputZip">
     </div>
 
     <div class="col-md-6">
-        <label for="inputMarStatus"> Marital Status:</label>
+        <label for="maritalstatus"> Marital Status:</label>
         <div class="form-check col">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input name="married" [(ngModel)]="person.maritalstatus" class="form-check-input" type="radio">
+            <label class="form-check-label" for="married">
               Married
             </label>
         </div>
 
         <div class="form-check col">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <input name="maritalstuatus" [(ngModel)]="person.maritalstatus" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
             <label class="form-check-label" for="flexRadioDefault2">
               Unmarried
             </label>
@@ -111,8 +111,8 @@
     </div>
 
     <div class="col-md-6">
-        <label for="InputDOM">Date of Marriage</label>
-        <input type="date" name="" id="InputDOM" class="form-control">
+        <label for="dom">Date of Marriage</label>
+        <input name="dom" [(ngModel)]="person.dom" type="date" name="" id="InputDOM" class="form-control">
     </div>
 
     <div class="col-12">
