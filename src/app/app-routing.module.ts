@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:"society/:id",component:SocietyComponent},
   {path:"personlist",component:PersonComponent},
   {path:"person/:id",component:PersonDetailComponent},
+  {path:"personlist/person/:id",component:PersonDetailComponent},
 ];
 
 @NgModule({

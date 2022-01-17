@@ -12,26 +12,31 @@ export class Society{
 }
 
 export class Person{
-  id: number;
-  firstname: string;
-  middlename: string;
-  lastname: string;
-  gender: string;
-  mobile: string;
-  whatsapp: string;
-  email: string;
-  occupation: string;//occupation change
-  address: string;
-  city: string;
-  area: string;
-  state: string;
-  country: string;
-  pincode: string;
-  dob: string;
-  maritalstatus: string;
-  dom: string;
-  photo: string;
-  society: Society;
+  static personCount : number = 3;
+  id: number | 1111;
+  firstname: string | "";
+  middlename: string | "";
+  lastname: string | "";
+  gender: string | "";
+  mobile: string | "";
+  whatsapp: string | "";
+  email: string | "";
+  occupation: string | "";//occupation change
+  address: string | "";
+  city: string | "";
+  area: string | "";
+  state: string | "";
+  country: string | "";
+  pincode: string | "";
+  dob: string | "";
+  maritalstatus: string | "";
+  dom: string | "";
+  photo: string | "";
+  society: Society | "";
+
+  // constructor(id:number){
+  //   this.id = id;
+  // }
 
   constructor(
     id: number,
@@ -54,7 +59,8 @@ export class Person{
     dom: string,
     photo: string,
     society: Society){
-      this.id = id;
+      Person.personCount++;
+      this.id = Person.personCount;
       this.firstname = firstname;
       this.middlename = middlename;
       this.lastname = lastname;
@@ -74,6 +80,7 @@ export class Person{
       this.dom = dom;
       this.photo = photo;
       this.society = society;
+      console.log("new Person created" + this.id);
   }
 }
 
@@ -103,7 +110,7 @@ export const societies: Society[] = [
   {"id": 3, "name": "brahman", "description": "brahman samaj"},
 ];
 
-export const persons: Person[] = [
+export var persons: Person[] = [
   {"id":1,
   "firstname":"meet",
   "middlename":"sanjaykumar",
@@ -168,3 +175,9 @@ export const persons: Person[] = [
   "society": new Society(1,"brahman","brahman samaj")
 },
 ];
+
+
+export function deletePerson(person: Person){
+  console.log("delete function :: " + person.id);
+  persons = persons.filter(({id})=>id !== person.id);
+}

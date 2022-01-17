@@ -8,18 +8,24 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let person of persons" routerLink="/person/{{person.id}}">
+    <tr *ngFor="let person of persons" >
       <td>
         {{person.id}}
       </td>
       <td>
         {{person.firstname}} {{person.lastname}}
       </td>
+      <td routerLink="person/{{person.id}}">
+        <a>detail</a>
+      </td>
       <td>
-        <a routerLink="person/{{person.id}}">detail</a>
+        <a (click)="delete(person)" routerLink="person/"> delete</a>
       </td>
     </tr>
   </tbody>
 </table>
 
+<button type="button" class="btn btn-primary" (click)="onAddClick()">
+  Add
+</button>
 

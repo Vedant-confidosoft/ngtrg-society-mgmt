@@ -18,9 +18,11 @@ export class PersonDetailComponent implements OnInit {
   }
 
   getPersonDetails(){
-    const id = parseInt(this.route.snapshot.params['id']) - 1;
-    //console.log(id);
-    this.person = persons[id];
+    const id = parseInt(this.route.snapshot.params['id']);
+    console.log(id);
+    //this.person = persons[id-1];
+    this.person = persons.find(x=>x.id == id);
+    console.log(this.person?.firstname);
   }
 
 }
